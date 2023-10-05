@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Этот атрибут определяет имя уровня документа метаданных -->
+    <title>Задание JS</title> 
+    <link rel="stylesheet" href="style/style.css"> 
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"> 
+
+    
+    <script> function checkForm(el) {
+        console.log("проверка");
+        
+        var name = el.name.value;
+        console.log(name);
+
+        var svaz = el.svaz.value;
+         console.log(svaz);
+         var vopros = el.vopros.value;
+        console.log(vopros);
+
+
+        
+var fail ="";
+var viv = name.value + " " + email.value + " " + tel.value;
+if (name == "" || email == "" || tel == "") 
+   fail = "Заполните все поля";
+
+else if(name.length <=1 || name.length >50)
+fail = "Введите корректное имя";
+
+
+
+if(fail == ""){
+    document.getElementById('vivod').innerText = viv;
+
+} else {
+    document.getElementById('error').innerHTML = fail;
+   
+} 
+
+        return false;
+    }
+    </script> 
+    <script>
+        function fanc(){
+  document.getElementById("posta").checked=true;    
+  document.getElementById("tele").checked=true;    
+  document.getElementById("nootv").checked=true;    
+ 
+}
+
+    </script>
+    <style>
+       /* для переключения темы */
+        main {
+        background: var(--background-color);
+        color: var(--text-color);
+        }
+    
+        button {
+            color: var(--background-color-dark);
+        }
+    
+        body.theme-dark {
+        --background-color: var(--background-color-dark);
+        --text-color: var(--akcent-color);
+    }
+    
+        @media (prefers-color-scheme: dark) {
+        body.theme-auto {
+            --background-color: var(--background-color-dark);
+            --text-color: var(--akcent-color);
+        }
+        }   
+        </style>
+</head>
+<body>
+    <header class="header">
+        <div class="menu">
+        <!-- лого сайта -->
+            <div class="header_logo">
+            <a href="../index.html">
+                <img src = "..\img\logo.jpg" alt="Логотип"  class="logo">
+            </a>
+        </div>
+    <!-- меню сайта -->
+        <nav  class="menu_nav">
+            <ul>
+                <li><a href="index.html">О себе</a></li>
+                <li><a href="JS.html">Задания JS</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- заголовок сайта -->
+        <div  class="title">
+            <h1>Веб-технологии</h1> 
+            <h3>Университет "Дубна"</h3>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div>Выберете тему:</div>
+             <select name="" id="theme">
+             <option value="auto">по умолчанию</option>
+             <option value="light">светлая</option>
+             <option value="dark">тёмная</option>
+             </select>
+             <script>
+             function applyTheme(theme){
+             document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+             document.body.classList.add(`theme-${theme}`);
+             }
+             document.addEventListener("DOMContentLoaded", ()=>{
+             document.querySelector("#theme").addEventListener("change", function(){applyTheme(this.value);});});
+             document.addEventListener("DOMContentLoaded", () => {
+                 const savedTheme = localStorage.getItem("theme") || "auto";
+                 applyTheme(savedTheme);
+                 for (const optionElement of document.querySelectorAll("#theme option")){
+                     optionElement.selected = savedTheme === optionElement.value;
+                 }
+                 document.querySelector("#theme").addEventListener("change", function(){
+                 localStorage.setItem("theme", this.value);
+                 applyTheme (this.value);})
+             })
+             </script>
+        </section>
+
+    <div class="grid" >
+        <section class = "item">
+            <h2>Форма</h2>
+            <div class="items">
+            <form action="" method="get" id="form1" onsubmit="return checkForm(this)">
+                <fieldset class="form-div" id="svaz1">
+                    <legend>Как Вам удобно получить ответ:</legend>
+                    <label for=""><input type="radio" name="svaz" id="posta" value="по почте" > по почте </label><br>
+                    <label for=""><input type="radio" name="svaz" id="tele" value="по телефону" > по телефону </label><br>
+                    <label for=""><input type="radio" name="svaz" id="nootv" value="не нужно отвечать" > не надо отвечать </label><br>
+                </fieldset>
+                        
+                <div class="form-div ">
+                    <label for="theme">Укажите тему вопроса</label><br>
+                    <select name="" id="theme" class="input-text">
+                        <option value="">работа</option>
+                        <option value="">сотрудничество</option>
+                        <option value="">личное</option>
+                    </select>
+                </div >
+
+                <fieldset class="form-div">
+                    <legend> И еще один вопрос?</legend>
+                    <label for="checkbox1"><input type="checkbox" name="vopros" id="checkbox1" value="может так">может так</label><br>
+                    <label for="checkbox2"><input type="checkbox" name="" id="checkbox2">или не так</label><br>
+                    <label for="checkbox3"><input type="checkbox" name="" id="checkbox2">иначе</label><br>
+                </fieldset>
+                    
+                <div class="form-div flex-row">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" name="name" id="name" class="input-text" placeholder="Введите ФИО">
+                </div>
+
+                <div class="form-div flex-row" id="email1">
+                    <label for="email">Адрес почты</label>
+                    <input type="email" name="email" id="email" class="input-text" placeholder="Введите адрес почты">
+                </div>
+
+                <div class="form-div flex-row" id="tel1">
+                    <label for="tel">Телефона</label>
+                    <input type="tel" name="tel" id="tel" class="input-text" placeholder="Введите номер телефона">
+                </div>
+
+                <div class="form-div">
+                    <div>Ваш вопрос:</div> 
+                    <div>
+                        <textarea cols="30" placeholder="Введите вопрос">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="align-center">
+                    <input type="submit" value="отправить вопрос" class="input-text">
+                </div>
+
+                <div id="error" style="color: red;"></div>
+                <div id="vivod" style="color: rgb(0, 255, 21);"></div>
+            </form>
+            </div>
+        </section>
+    </script>
+</section>
+</script>
+
+    </script>
+</body>
+</html>
+

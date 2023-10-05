@@ -1,33 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="styles.css" href="styles.css">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Макет</title>
-    </head>
-    <body>
-        <div class="wraper">
-            <div class="text">
-                <h1>ТЕКСТ</h1>
-                <h3>ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕЕКСТ ТЕКСТ ТЕКСТ</h3>
-                <p></p>
+<head>
+    <!-- голова html-страницы, её содержимое не видно -->
+    <meta charset="UTF-8"> <!-- Атрибут charset Указывает кодировку документа -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Этот атрибут определяет имя уровня документа метаданных -->
+    <title>Главная страница</title> <!-- название страницы -->
+    <!-- <link rel="stylesheet" href="style/reset.css"> стили -->
+    <link rel="stylesheet" href="style/style.css"> <!-- стили -->
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="menu">
+    <!-- лого сайта -->
+            <div class="header_logo">
+                <a href="index.html">
+                    <img src = "img\logo.jpg" alt="Логотип" class="logo">
+                </a>
             </div>
+    <!-- меню сайта -->
+            <nav  class="menu_nav">
+                <ul>
+                    <li><a href="index.html">О себе</a></li>
+                    <li><a href="resume.html">Резюме</a></li>
+                    <li><a href="JS.html">Задания JS</a></li>
+                </ul>
+            </nav>
         </div>
-    </body>
-    <footer class="footer">
-        <div class="container">
-            <div class="text">
-                <h1>Заголовок футера</h1>
-                <p>Текст футера здесь...</p> 
-                <div class="flex-beetwen-center">
-                    <img src="images.png" alt = ""width ="50" class="image">
-                    <img src="git.png" alt = ""width ="50" class="image"> 
-                </div>   
-                          
-            </div>           
-        </div>       
-    </footer>
-    </html>
+    <!-- заголовок сайта -->
+        <div class="title">
+            <h1>Веб-технологии</h1> 
+            <h3>Университет "Дубна"</h3>
+        </div>
+    </header>
+    <main>
+    <!-- основное содержание страницы -->
+        <section class="">
+    <!-- изображение, заголовок, текст -->
+        <div class="wrapper main1">
+            
+            <div class="desk">
+                <h2>Илья Мальцев</h2>
+            <p>Студент в университете "Дубна"</p>
+            </div>
+            <img src="https://sun9-42.userapi.com/impg/fgp67QzeAmLtBwi6w33P0N6DYmfroQFwVGjcWg/16LRXsrVgCE.jpg?size=1257x1600&quality=96&sign=ebcc955b9f70057e7fbedc2e440d5058&type=album" alt="" class="main_foto">
+        
+        </div>
+        </section>
+        <section class="htmltegs brown">
+    <!-- Заголовок, 3 или более изображений, под каждым заголовок -->
+    <div class="wrapper">
+        <a name="comps"></a>
+            
+                <h2>Что я умею работать с такими средами как:</h2>
+                <div class="html_cards">
+                    <div class="cards">
+                        <img src="img/icon_k1.jpg" width="150">
+                        <h4>KompasFlow</h4>
+                    </div>
+                    <div class="cards">
+                        <img src="img/CCCCC.png" width="65">
+                        <h4>C# </h4>
+                    </div>
+                    <div class="cards">
+                        <img src="img/Python.png" width="210">
+                        <h4>
+                            Front-End
+                        </h4>
+                    </div>
+                    <div class="cards">
+                        <img src="img/html5.png" width="70">
+                        <h4>Html 5</h4>
+                    </div>
+                    <div class="cards">
+                        <img src="img/css.png" width="80">
+                        <h4>Css 3</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="">
+    <!-- 2 списка -->
+    <div class="wrapper lists">
+            <div class="list">
+            <h3>Мои лучшие качества</h3>
+            <ul>
+                <li>Cозидательный</li>
+                <li>Инециативный</li>
+                <li>Активный</li>
+                <li>Коммуникабельность</li>
+                <li>Дружелюбие</li>
+            </ul>
+            </div>
+            <div class="list">
+            <h3>Список жизненных целей</h3>
+            <ul>
+                <li>Стать высококлассным специалистом</li>
+                <li>Получить высокооплачиваемую должность</li>
+                <li>Весело жить</li>
+                <li>Купить ракету</li>
+                <li>Колонизировать Луну</li>
+            </ul>
+    </div></div>
+        </section>
+        <section class="button brown">
+            <div class="wrapper">
+    <!-- заголовок,  случайный текст, кнопка -->
+            <h2>Самая важная информация</h2>
+            <p>Для того, чтобы ознакомиться с <b>самой важной</b> информацией нажмите кнопку ниже</p>
+            <button onclick="alert('Дайте деняг на разработку своей космичекой компании');">
+                Узнать
+            </button>
+        </div>
+        </section>
+    
+    </main>
+ 
+</body>
+</html>

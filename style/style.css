@@ -1,0 +1,423 @@
+
+/* шрифт */
+/* scada-regular - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Scada';
+  font-style: normal;
+  font-weight: 450;
+  src: url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-regular.svg#Scada') format('svg'); /* Legacy iOS */
+}
+/* scada-italic - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Scada';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-italic.svg#Scada') format('svg'); /* Legacy iOS */
+}
+/* scada-700 - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Scada';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-700.svg#Scada') format('svg'); /* Legacy iOS */
+}
+/* scada-700italic - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Scada';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-700italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-700italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/scada-v14-latin_cyrillic-ext_cyrillic-700italic.svg#Scada') format('svg'); /* Legacy iOS */
+}
+/* конец шрифтов */
+
+/* общие стили */
+body {
+    font-family: 'Scada';
+    font-style: normal;
+    font-size: 18px;
+    margin: 0;
+	padding: 0;
+	border: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+/*цветовая схема*/
+    --element-color: #898989; 
+     --background-color: #ebe6ee;
+     --akcent-color: #000000;
+     --background-color-dark: #464646;
+     --text-color: #000000;
+     --element-color-dark: #e70379;
+   
+}
+
+main {
+    background: #433f4c;
+    /* color: var(--text-color); */
+    padding: 0;
+    /* margin-bottom: 20px; */
+    text-align: center;
+    flex-grow: 1;
+    border: 1px dotted var(--element-color);
+}
+
+.wrapper{
+    max-width: 1060px;
+    min-height: 250px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.brown {
+    background-color: var(--element-color);
+}
+    /* шапка */
+.header{
+    background-image: url();
+    height: 300px;
+    background-repeat:round;
+    background-color: var(--element-color);
+    padding-left: 20px;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 3px black, 0 0 3em var(--background-color);
+}
+
+h3 {
+    margin: 0;
+    padding: 20px;
+}
+    /* логотип */
+.header_logo {
+    flex-basis: 10%;  
+}
+
+.logo {
+    width: 100px;
+    border-radius: 40%;  /* Скругление углов изображения */
+    border: 5px solid var(--element-color); /* Цвет и ширину рамки */
+    box-shadow: 2px 1px 5px var(--akcent-color); /* Цвет и размер тени */
+    
+}
+    /* навигация */
+.menu {
+    display: flex;
+}
+
+.menu_nav{
+    display: flex;
+    margin-left: 10px;
+    list-style-type: none;
+    align-items:center;
+    margin: 0px;
+    flex-basis: 90%;
+    justify-content: right;
+}
+  
+.menu_nav li {
+    display: inline;
+    list-style-type: none; /* убираем маркеры */
+}
+
+.menu_nav a:last-child {
+margin-right: 0;
+}
+
+.menu_nav a {
+    margin: -10px;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    width: 130px;
+}
+
+
+.countdown-wrapper div div{
+    color: white;
+    display: inline-block;
+    align-items:center;
+   
+}
+
+.menu_nav a:hover { 
+    color:black; 
+    background:var(--element-color);
+}
+
+/* подвал */
+.footer{
+    background-color: var(--background-color);
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height:100px;
+    align-items: center;
+    padding: 0 100px;
+    margin-bottom: 0;
+}
+
+/* стили для контента */
+.main1 {
+display: grid;
+grid-template-columns: repeat(2,1fr);
+align-content: center;
+text-align: left;
+}
+
+.main_foto {
+max-width: 90%;
+grid-column: span 1;
+margin: 15px;
+}
+
+.port_foto1 {
+max-width: 90%;
+width: 350px;
+grid-column: span 1;
+margin:auto;
+text-align: right;
+}
+
+.port_foto2 {
+    max-width: 90%;
+    width: 350px;
+    grid-column: span 1;
+    margin:auto;
+    text-align: left;
+    }
+
+.desc {
+align-items: center;  
+}
+
+.html_cards{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.cards{
+    grid-column: span 1;
+    margin-top: 15px;
+}
+    
+.lists {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.list {
+    grid-column: span 1;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.list li{
+    text-align: left;
+}
+
+.cont_items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center; 
+}
+.items {
+    background-image: url();
+    display: inline-block;
+    background-size: 400mm;
+    text-align: center;
+    border: 2px solid var(--akcent-color);
+    border-radius: 50px;
+    padding: 50px;
+    grid-column: span 3;
+    margin: 10px;
+    box-shadow: 1px 1px 6px 3px var(--akcent-color);
+    width: 90%;
+   
+}
+.items2 {
+
+    width: 90%;
+   
+}
+.items1 {
+    background-image: url();
+    /* background-color: var(--element-color); */
+    text-align: center;
+    border: 2px solid var(--akcent-color);
+    border-radius: 50px;
+    /* padding: 30px; */
+    grid-column: span 1;
+    margin: 15px;
+    box-shadow: 1px 1px 6px 3px var(--akcent-color);
+    width: 95%;
+    
+}
+.gg{
+    background-image: url();
+    background-size: 300mm;
+    text-align: center;
+    color: #fff;
+    align-items: center;
+    border: 2px solid var(--akcent-color);
+    border-radius: 30px;
+    padding: 30px;  
+    grid-column: span 1;
+    margin: 15px;
+    box-shadow: 1px 1px 6px 3px var(--akcent-color);
+    width: 87%;
+}
+.item {
+    width: 95%;
+}
+/* стили для таблицы */
+table {
+    border-collapse: collapse;
+    text-align: center;
+    border-color: var(--akcent-color);
+    }
+
+thead, .browny {
+    background: var(--element-color);
+    color: var(--akcent-color);
+    padding: 10px 20px;
+    }
+    
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: var(--akcent-color);
+    padding: 5px;
+    }
+    
+td {
+    background: var(--background-color);
+    }
+th:first-child, td:first-child {
+    text-align: center;
+    }
+/* конец стилей для таблицы */
+
+/* стили для формы */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    justify-items: center; 
+    /* height: 100vh; */
+}
+
+.left { 
+    grid-area: left; 
+    }
+
+.right{ 
+  grid-area: right; 
+    } 
+
+.form-div
+{
+    padding: 20px;
+    display: block;
+    text-align: left;
+}
+
+.flex-row
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.align-center
+{
+    text-align: center;
+}
+
+/* конец стилей для формы */
+
+ /* галерея слайдер */
+ .contaсiner {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: var(--element-color);
+    padding: 30px;
+    text-align: center;
+    border-radius: 5%;
+    box-shadow: 1px 1px 6px 3px var(--akcent-color);
+}
+
+.mini{
+    width: 256px;
+}
+
+.slider {
+    border: 2px solid var(--background-color);
+    width: 256px;
+    height: 256px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider-line {
+    width: 1024px;
+    height: 256px;
+    display: flex;
+    background: rgb(102, 3, 122);
+    position: relative; /* относительная позиция, ниже указыватся координаты*/
+    left: 0;
+    transition: all ease 1s; /*Устанавливает эффект перехода между двумя состояниями элемента,*/
+    /* Функция по умолчанию, переход начинается медленно, разгоняется быстро и замедляется в конце. */
+}
+
+button {
+    background: var(--akcent-color);
+    border: 1px solid var(--background-color);
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: .9rem;
+}
+
+button:hover {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+button:active {
+    background: #000;
+    color: #fff;
+}
+/* конец стилей для галереи */
