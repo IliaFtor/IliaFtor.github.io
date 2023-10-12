@@ -4,22 +4,39 @@
     <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Этот атрибут определяет имя уровня документа метаданных -->
-    <title>Задание JS</title> 
+    <title>Регистрация</title> 
     <link rel="stylesheet" href="style/style.css"> 
-    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"> 
-
     
     <script> function checkForm(el) {
         console.log("проверка");
         
+        for(i = 0; i < el.length ; i++ ){
+            if(el.svaz[i].checked)
+            {
+                console.log(el.svaz[i].value);
+            }
+        }
+        for(i = 0; i < el.length ; i++ ){
+            if(el.vopros[i].checked)
+            {
+                console.log(el.vopros[i].value);
+            }
+        }
+
         var name = el.name.value;
         console.log(name);
-
+        var job = el.theme.value;
+        console.log(job);
+        var tel  = el.tel.value;
+        console.log(tel);
+        var em = el.email.value;
+        console.log(em);
+        var messsange = el.messsange.value;
+        console.log(messsange);
         var svaz = el.svaz.value;
          console.log(svaz);
          var vopros = el.vopros.value;
         console.log(vopros);
-
 
         
 var fail ="";
@@ -127,8 +144,8 @@ if(fail == ""){
              </script>
         </section>
 
-    <div class="grid" >
-        <section class = "item">
+    <div class="grid">
+        <section class="items">
             <h2>Форма</h2>
             <div class="items">
             <form action="" method="get" id="form1" onsubmit="return checkForm(this)">
@@ -151,8 +168,8 @@ if(fail == ""){
                 <fieldset class="form-div">
                     <legend> И еще один вопрос?</legend>
                     <label for="checkbox1"><input type="checkbox" name="vopros" id="checkbox1" value="может так">может так</label><br>
-                    <label for="checkbox2"><input type="checkbox" name="" id="checkbox2">или не так</label><br>
-                    <label for="checkbox3"><input type="checkbox" name="" id="checkbox2">иначе</label><br>
+                    <label for="checkbox2"><input type="checkbox" name="vopros" id="checkbox2">или не так</label><br>
+                    <label for="checkbox3"><input type="checkbox" name="vopros" id="checkbox3">иначе</label><br>
                 </fieldset>
                     
                 <div class="form-div flex-row">
@@ -173,7 +190,7 @@ if(fail == ""){
                 <div class="form-div">
                     <div>Ваш вопрос:</div> 
                     <div>
-                        <textarea cols="30" placeholder="Введите вопрос">
+                        <textarea cols="30" placeholder="Введите вопрос" id = "messsange">
                         </textarea>
                     </div>
                 </div>
